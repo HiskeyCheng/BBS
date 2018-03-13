@@ -1,8 +1,4 @@
-> 本项目是从 [pybbs](https://github.com/tomoya92/pybbs) fork 过来的
-> 
-> 使用说明：请保留页面底部的 *powered by yiiu.co* 感谢支持
-
-在线地址: [yiiu.co](https://yiiu.co)
+> 本项目是从 (https://github.com/HiskeyCheng/BBS) fork 过来的
 
 ## 技术栈
 
