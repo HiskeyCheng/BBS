@@ -5,13 +5,13 @@
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>co.yiiu</groupId>
-  <artifactId>yiiu</artifactId>
+  <groupId>chengzhixiang</groupId>
+  <artifactId>BBS</artifactId>
   <version>2.7</version>
   <packaging>jar</packaging>
 
-  <name>YIIU</name>
-  <description>YIIU develop by spring-boot</description>
+  <name>BBS</name>
+  <description>BBS develop by spring-boot</description>
 
   <parent>
     <groupId>org.springframework.boot</groupId>
@@ -59,16 +59,16 @@
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-web</artifactId>
     </dependency>
-    <!--<dependency>-->
-    <!--<groupId>mysql</groupId>-->
-    <!--<artifactId>mysql-connector-java</artifactId>-->
-    <!--<scope>runtime</scope>-->
-    <!--</dependency>-->
     <dependency>
+    <groupId>mysql</groupId>
+    <artifactId>mysql-connector-java</artifactId>
+    <scope>runtime</scope>
+    </dependency>
+    <!--<dependency>
       <groupId>org.xerial</groupId>
       <artifactId>sqlite-jdbc</artifactId>
       <version>3.20.1</version>
-    </dependency>
+    </dependency>-->
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-test</artifactId>
@@ -155,7 +155,7 @@
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-maven-plugin</artifactId>
         <configuration>
-          <mainClass>co.yiiu.Application</mainClass>
+          <mainClass>co.bbs.Application</mainClass>
           <fork>true</fork>
         </configuration>
       </plugin>

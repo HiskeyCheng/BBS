@@ -15,16 +15,16 @@ spring:
     cache: false
     settings:
       template_exception_handler: rethrow
-  datasource:
-    driver-class-name: org.sqlite.JDBC
-    url: jdbc:sqlite:./yiiu.sqlite
 #  datasource:
-#    url: jdbc:mysql://localhost/yiiu?useSSL=false&characterEncoding=utf8
-#    username: root
-#    password: 123123
+#    driver-class-name: org.sqlite.JDBC
+#    url: jdbc:sqlite:./bbs.sqlite
+  datasource:
+    url: jdbc:mysql://localhost:3306/bbs?useSSL=false&characterEncoding=utf8
+    username: root
+    password: 123456
   jpa:
-#    database: mysql
-    database-platform: co.yiiu.core.dialect.SQLiteDialect
+    database: mysql
+#    database-platform: co.bbscore.dialect.SQLiteDialect
     show-sql: true
     hibernate:
       ddl-auto: update
@@ -38,15 +38,24 @@ spring:
     favicon:
       enabled: false
   mail:
-    host: smtp.qq.com
-    username: xxoo@qq.com
-    password: # 这里的密码是QQ邮箱的授权码
-    port: 465
+    host: smtp.163.com
+    username: 15610554031@163.com
+    password: xiaohui,1204
     properties:
       mail.smtp.auth: true
-      mail.smtp.ssl.enable: true
       mail.smtp.starttls.enable: true
       mail.smtp.starttls.required: true
+#  QQ邮箱配置
+#  mail:
+#    host: smtp.qq.com
+#    username: xxoo@qq.com
+#    password: # 这里的密码是QQ邮箱的授权码
+#    port: 465
+#    properties:
+#      mail.smtp.auth: true
+#      mail.smtp.ssl.enable: true
+#      mail.smtp.starttls.enable: true
+#      mail.smtp.starttls.required: true
   http:
     multipart:
       max-file-size: 2MB

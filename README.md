@@ -98,7 +98,7 @@ init_connect='SET NAMES utf8mb4'
     driver-class-name: org.sqlite.JDBC
     url: jdbc:sqlite:./yiiu.sqlite
   jpa:
-    database-platform: co.yiiu.core.dialect.SQLiteDialect
+    database-platform: co.bbs.core.dialect.SQLiteDialect
 ```
 
 另外pom.xml文件里的mysql依赖也要取消注释
