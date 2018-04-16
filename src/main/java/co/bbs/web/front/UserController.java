@@ -118,10 +118,13 @@ public class UserController extends BaseController {
   @PostMapping("/profile")
   public String updateUserInfo(String email, String url, String bio, HttpServletResponse response) throws Exception {
     User user = getUser();
-    if (user.isBlock())
+    if (user.isBlock()) {
       throw new Exception("你的帐户已经被禁用，不能进行此项操作");
+    }
     user.setEmail(email);
-    if (bio != null && bio.trim().length() > 0) user.setBio(bio);
+    if (bio != null && bio.trim().length() > 0) {
+      user.setBio(bio);
+    }
     user.setUrl(url);
     userService.save(user);
     return redirect(response, "/user/" + user.getUsername());
@@ -149,7 +152,9 @@ public class UserController extends BaseController {
   @PostMapping("changeAvatar")
   @ResponseBody
   public Result changeAvatar(String avatar) throws ApiException, IOException {
-    if (StringUtils.isEmpty(avatar)) throw new ApiException("头像不能为空");
+    if (StringUtils.isEmpty(avatar)) {
+      throw new ApiException("头像不能为空");
+    }
     String _avatar = avatar.substring(avatar.indexOf(",") + 1, avatar.length());
     User user = getUser();
     byte[] bytes;
@@ -184,8 +189,9 @@ public class UserController extends BaseController {
   @PostMapping("/changePassword")
   public String changePassword(String oldPassword, String newPassword, Model model) throws Exception {
     User user = getUser();
-    if (user.isBlock())
+    if (user.isBlock()){
       throw new Exception("你的帐户已经被禁用，不能进行此项操作");
+    }
     if (new BCryptPasswordEncoder().matches(oldPassword, user.getPassword())) {
       user.setPassword(new BCryptPasswordEncoder().encode(newPassword));
       userService.save(user);
@@ -273,8 +279,12 @@ public class UserController extends BaseController {
     String userUploadPath = getUsername() + "/";
     File file = new File(siteConfig.getUploadPath() + userUploadPath + dirName + "/" + fileName);
     if (file.exists()) {
-      if (file.delete()) return Result.success();
-      else return Result.error("删除失败");
+      if (file.delete()) {
+        return Result.success();
+      }
+      else {
+        return Result.error("删除失败");
+      }
     } else {
       return Result.error("文件不存在");
     }

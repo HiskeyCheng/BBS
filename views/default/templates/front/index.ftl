@@ -104,7 +104,7 @@
       <#include "./components/welcome.ftl"/>
       <@welcome/>
     </#if>
-
+    <#--user information-->
     <#include "./components/score.ftl"/>
     <@score p=1 limit=10/>
   </div>

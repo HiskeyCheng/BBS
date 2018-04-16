@@ -1,8 +1,8 @@
 server:
-  port: 8080
+  port: 8081
 spring:
   application:
-    name: YIIU
+    name: Hiskey
     index: 1
   resources:
     static-locations:
@@ -19,7 +19,7 @@ spring:
 #    driver-class-name: org.sqlite.JDBC
 #    url: jdbc:sqlite:./bbs.sqlite
   datasource:
-    url: jdbc:mysql://localhost:3306/bbs?useSSL=false&characterEncoding=utf8
+    url: jdbc:mysql://47.104.73.142:3306/bbs?useSSL=false&characterEncoding=utf8
     username: root
     password: 123456
   jpa:
@@ -37,25 +37,28 @@ spring:
     static-path-pattern: /static/**
     favicon:
       enabled: false
-  mail:
-    host: smtp.163.com
-    username: 15610554031@163.com
-    password: xiaohui,1204
-    properties:
-      mail.smtp.auth: true
-      mail.smtp.starttls.enable: true
-      mail.smtp.starttls.required: true
-#  QQ邮箱配置
 #  mail:
-#    host: smtp.qq.com
-#    username: xxoo@qq.com
-#    password: # 这里的密码是QQ邮箱的授权码
-#    port: 465
+#    host: smtp.163.com
+#    username: 15610554031@163.com
+#    password: xiaohui,1204
 #    properties:
 #      mail.smtp.auth: true
-#      mail.smtp.ssl.enable: true
-#      mail.smtp.starttls.enable: true
+#      mail.smtp.startlls.enable: true
 #      mail.smtp.starttls.required: true
+#      mail.smtp.ssl.enable: true
+#    port: 465
+
+  # QQ邮箱配置
+  mail:
+    host: smtp.qq.com
+    username: hiskeycheng@qq.com
+    password: cabgjmpicfxrhcbi # 这里的密码是QQ邮箱的授权码
+    port: 465
+    properties:
+      mail.smtp.auth: true
+      mail.smtp.ssl.enable: true
+      mail.smtp.starttls.enable: true
+      mail.smtp.starttls.required: true
   http:
     multipart:
       max-file-size: 2MB
@@ -75,10 +78,10 @@ security:
       login-path: /github_login
 
 site:
-  name: YIIU
+  name: Hiskey
   intro: <h5>属于Java语言的bbs</h5><p>在这里，您可以提问，回答，分享，诉说，这是个属于Java程序员的社区，欢迎您的加入！</p>
-  baseUrl: http://localhost:8080/ # 不要忘了后面的 '/'
-  staticUrl: http://localhost:8080/static/images/upload/
+  baseUrl: http://47.104.73.142:8081/ # 不要忘了后面的 '/'
+  staticUrl: http://47.104.73.142:8081/static/images/upload/
   pageSize: 20
   uploadPath: ./views/${site.theme}/static/images/upload/
   theme: default

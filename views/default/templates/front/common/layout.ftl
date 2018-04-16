@@ -42,6 +42,7 @@
 
   <script src="/static/js/jquery.min.js"></script>
   <script src="/static/bootstrap/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="/static/js/canvas-particle.js"></script>
   <script>
     $(function () {
       var n = $("#goTop");
@@ -51,10 +52,28 @@
         });
       });
     });
+    window.onload = function() {
+        //配置
+        var config = {
+            vx: 4,	//小球x轴速度,正为右，负为左
+            vy: 4,	//小球y轴速度
+            height: 2,	//小球高宽，其实为正方形，所以不宜太大
+            width: 2,
+            count: 200,		//点个数
+            color: "121, 162, 185", 	//点颜色
+            stroke: "147, 112, 219", 		//线条颜色
+            dist: 6000, 	//点吸附距离
+            e_dist: 20000, 	//鼠标吸附加速距离
+            max_conn: 10 	//点到点最大连接数
+        }
+
+        //调用
+        CanvasParticle(config);
+    }
   </script>
 </head>
 <body>
-<div class="wrapper">
+<div class="wrapper" id="mydiv">
   <#include "./header.ftl">
   <@header page_tab=page_tab/>
   <div class="container" style="padding: 0 25px;">

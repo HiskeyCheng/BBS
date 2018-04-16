@@ -153,10 +153,14 @@ public class CommonController extends BaseController {
   @GetMapping("/sendEmailCode")
   @ResponseBody
   public Result sendEmailCode(String email) throws ApiException {
-    if (!StrUtil.check(email, StrUtil.check)) throw new ApiException("请输入正确的Email");
+    if (!StrUtil.check(email, StrUtil.check)) {
+      throw new ApiException("请输入正确的Email");
+    }
 
     User user = userService.findByEmail(email);
-    if (user != null) throw new ApiException("邮箱已经被使用");
+    if (user != null) {
+      throw new ApiException("邮箱已经被使用");
+    }
 
     try {
       String genCode = codeService.genEmailCode(email);
@@ -267,8 +271,9 @@ public class CommonController extends BaseController {
     if (!file.isEmpty()) {
       try {
         if (fileUtil.getTotalSizeOfFilesInDir(new File(siteConfig.getUploadPath() + getUsername())) + file.getSize()
-            > getUser().getSpaceSize() * 1024 * 1024)
+            > getUser().getSpaceSize() * 1024 * 1024) {
           return Result.error("你的上传空间不够了，请用积分去用户中心兑换");
+        }
         String requestUrl = fileUtil.uploadFile(file, FileUploadEnum.FILE, getUsername());
         return Result.success(requestUrl);
       } catch (IOException e) {

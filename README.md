@@ -39,10 +39,10 @@
 *数据库里的表是项目启动时自动创建的，不要再问创建表的脚本在哪了*
 
 - 创建数据库yiiu, 字符集utf8，如果想支持emoji，就要选择utf8mb4字符集（仅限使用MySQL数据库）
-- `git clone https://github.com/yiiu-co/yiiu`
+- `git clone https://github.com/HiskeyCheng/BBS.git`
 - 运行 `mvn spring-boot:run` 启动项目 (这一步系统会自动把表创建好)
-- 访问 `http://localhost:8080`
-- 登录用户名：tomoya 密码：123123 (权限是超级管理员)
+- 访问 `http://localhost:8081`
+- 登录用户名：hiskey 密码：123456 (权限是超级管理员)
 
 ## 打包部署开发环境
 
@@ -85,9 +85,9 @@ init_connect='SET NAMES utf8mb4'
 ```yml
 # mysql 配置
   datasource:
-    url: jdbc:mysql://localhost/yiiu?useSSL=false&characterEncoding=utf8
+    url: jdbc:mysql://.....?useSSL=false&characterEncoding=utf8
     username: root
-    password: 123123
+    password: 123456
   jpa:
     database: mysql
 ```
@@ -96,7 +96,7 @@ init_connect='SET NAMES utf8mb4'
 # sqlite 配置
   datasource:
     driver-class-name: org.sqlite.JDBC
-    url: jdbc:sqlite:./yiiu.sqlite
+    url: jdbc:sqlite:./hiskey.sqlite
   jpa:
     database-platform: co.bbs.core.dialect.SQLiteDialect
 ```
@@ -136,18 +136,13 @@ mail:
 
 ## 反馈
 
-[issues](https://github.com/yiiu-co/yiiu/issues)
+[issues](https://github.com/HiskeyCheng/BBS/issues)
 
-QQ群：`419343003`
 
 *提问题的时候请将问题重现步骤描述清楚*
 
 ## 其它版本
 
-- golang版：https://github.com/tomoya92/pybbs-go
-- springboot版：https://github.com/yiiu-co/yiiu
-- jfinal版：https://github.com/tomoya92/pybbs/tree/v2.3
-- ssm版：https://github.com/ehuacui/ehuacui-bbs
 
 ## 贡献
 

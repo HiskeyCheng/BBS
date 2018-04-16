@@ -5,7 +5,7 @@
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>chengzhixiang</groupId>
+  <groupId>czx</groupId>
   <artifactId>BBS</artifactId>
   <version>2.7</version>
   <packaging>jar</packaging>
@@ -141,14 +141,14 @@
   </properties>
 
   <build>
-    <finalName>yiiu</finalName>
+    <finalName>bbs</finalName>
     <resources>
       <resource>
         <directory>src/main/resources</directory>
       </resource>
-      <!--<resource>-->
-      <!--<directory>views</directory>-->
-      <!--</resource>-->
+      <resource>
+      <directory>views</directory>
+      </resource>
     </resources>
     <plugins>
       <plugin>
@@ -161,5 +161,26 @@
       </plugin>
     </plugins>
   </build>
+
+
+  <!--<build>
+    <finalName>bbs</finalName>
+    <resources>
+      <resource>
+        <directory>src/main/resources</directory>
+      </resource>
+      <resource>
+        <directory>views</directory>
+      </resource>
+    </resources>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-war-plugin</artifactId>
+        <version>2.6</version>
+      </plugin>
+    </plugins>
+  </build>-->
+
 
 </project>
