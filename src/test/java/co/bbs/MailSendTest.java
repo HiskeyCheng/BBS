@@ -18,7 +18,7 @@ import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.test.context.junit4.SpringRunner;
 
 /**
- * @description:
+ * @description: 邮件发送测试
  * @author: 程志祥<cheng_zx@suixingpay.com>
  * @date: 2018/3/13 下午1:41
  * @version: V1.0
