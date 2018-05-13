@@ -1,7 +1,7 @@
 _user:
   username: HiskeyCheng
   password: $2a$10$KkUG107R3ASTHfAHei.bweXWXgCa4cE1KhK.F0odzfE0r97aeeTXC  # 这个密码要用 new BCryptPasswordEncoder().encode(newPassword) 算出，如果不会用，可以用默认的，程序启动了，修改即可
-  avatar: http://localhost:8080/static/images/upload/tomoya/avatar.png
+  avatar: http://localhost:80/static/images/upload/tomoya/avatar.png
   email: 15610554031@163.com
   bio: hello world
   url: https://github.com/HiskeyCheng/BBS

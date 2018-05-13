@@ -11,7 +11,8 @@
     <meta name="baidu-site-verification" content="${site.baiduZZ}" />
   </#if>
   <title>${page_title!site.name}</title>
-  <link rel="shortcut icon" href="/static/favicon.svg">
+  <link rel="shortcut icon" href="/static/dog.ico">
+  <link rel="bookmark" href="/static/dog.ico"/>
   <link rel="stylesheet" href="/static/bootstrap/css/bootstrap.min.css">
   <link rel="stylesheet" href="/static/font-awesome/css/font-awesome.min.css">
   <link rel="stylesheet" href="/static/css/app.css">
