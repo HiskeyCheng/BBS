@@ -1,4 +1,3 @@
-> 本项目是从 (https://github.com/HiskeyCheng/BBS) fork 过来的
 
 ## 技术栈
 
@@ -133,10 +132,6 @@ mail:
     mail.smtp.starttls.enable: true
     mail.smtp.starttls.required: true
 ```
-
-## 反馈
-
-[issues](https://github.com/HiskeyCheng/BBS/issues)
 
 
 *提问题的时候请将问题重现步骤描述清楚*
