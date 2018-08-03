@@ -18,12 +18,12 @@ spring:
 #  datasource:
 #    driver-class-name: org.sqlite.JDBC
 #    url: jdbc:sqlite:./bbs.sqlite
-  datasource:
-    url: jdbc:mysql://xxxxxxx:3306/bbs?useSSL=false&characterEncoding=utf8
-    username: root
-    password: 123456
-  jpa:
-    database: mysql
+#  datasource:
+#    url: jdbc:mysql://xxxxxxx:3306/bbs?useSSL=false&characterEncoding=utf8
+#    username: root
+#    password: 123456
+#  jpa:
+#    database: mysql
 #    database-platform: co.bbscore.dialect.SQLiteDialect
     show-sql: true
     hibernate:
@@ -49,16 +49,16 @@ spring:
 #    port: 465
 
   # QQ邮箱配置
-  mail:
-    host: smtp.qq.com
-    username: xxxxx@qq.com
-    password: xxxxxx # 这里的密码是QQ邮箱的授权码
-    port: 465
-    properties:
-      mail.smtp.auth: true
-      mail.smtp.ssl.enable: true
-      mail.smtp.starttls.enable: true
-      mail.smtp.starttls.required: true
+#  mail:
+#    host: smtp.qq.com
+#    username: xxxxx@qq.com
+#    password: xxxxxx # 这里的密码是QQ邮箱的授权码
+#    port: 465
+#    properties:
+#      mail.smtp.auth: true
+#      mail.smtp.ssl.enable: true
+#      mail.smtp.starttls.enable: true
+#      mail.smtp.starttls.required: true
   http:
     multipart:
       max-file-size: 2MB
