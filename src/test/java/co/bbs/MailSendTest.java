@@ -31,7 +31,7 @@ public class MailSendTest {
 //        message.setTo("cheng_zx@suixingpay.com");
 //        message.setSubject("标题：测试标题");
 //        message.setText("测试内容部份");
-//        javaMailSender.send(message);*/
+//        javaMailSender.send(message);*/ hahah
 //    }
 
 }
